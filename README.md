@@ -9,20 +9,13 @@ Biblioteca Python leve para gerar senhas e frases-senha seguras, e estimar a for
 - `password()`: senhas aleatórias configuráveis.
 - `passphrase()`: frases-senha com palavras sorteadas (lista em português embutida).
 - `strength()`: estimativa de entropia e nota de força.
-- CLI mínima: `pwgen`.
 
 ## Instalação
 
-```bash
-pip install password_generator_library
-```
-
-Ou, para desenvolvimento:
+Sem pacote por enquanto: clone o repositório e use o arquivo `password_generator_library.py` diretamente.
 
 ```bash
 git clone https://github.com/Leosurname/password_generator_library.git
-cd password_generator_library
-pip install -e .
 ```
 
 ## Uso
@@ -55,13 +48,6 @@ Gera uma frase-senha, por exemplo `cavalo-nuvem-tigela-rio`.
 
 Devolve `{"entropy_bits": float, "score": str}`. A entropia é estimada por `comprimento × log2(tamanho do alfabeto)`, com penalidade para sequências (`1234`, `abcd`) e repetições (`aaaa`).
 
-## CLI
-
-```bash
-pwgen 20            # senha de 20 caracteres
-pwgen --phrase 5    # frase-senha de 5 palavras
-```
-
 ## Segurança
 
 A geração usa o módulo [`secrets`](https://docs.python.org/3/library/secrets.html), adequado para criptografia, e nunca `random`.
@@ -69,7 +55,6 @@ A geração usa o módulo [`secrets`](https://docs.python.org/3/library/secrets.
 ## Desenvolvimento
 
 ```bash
-pip install -e ".[dev]"
 pytest
 ```
 
