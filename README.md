@@ -1,4 +1,4 @@
-# pwgen-lite
+# password_generator_library
 
 Biblioteca Python leve para gerar senhas e frases-senha seguras, e estimar a força de uma senha. Sem dependências externas: usa apenas a biblioteca padrão (`secrets`, `math`).
 
@@ -14,7 +14,7 @@ Biblioteca Python leve para gerar senhas e frases-senha seguras, e estimar a for
 ## Instalação
 
 ```bash
-pip install pwgen-lite
+pip install password_generator_library
 ```
 
 Ou, para desenvolvimento:
@@ -28,7 +28,7 @@ pip install -e .
 ## Uso
 
 ```python
-from pwgen_lite import password, passphrase, strength
+from password_generator_library import password, passphrase, strength
 
 password(20)                    # 'vR7#kPq2!mXz9Lc$4TwB'
 passphrase(5, separator=" ")    # 'rio tigela cavalo nuvem faca'
